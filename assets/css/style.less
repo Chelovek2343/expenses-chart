@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-size: 18px;
+    color: #000;
+    font-weight: normal;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: hsl(27, 66%, 92%);
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.chart {
+    max-width: 537px;
+    width: 100%;
+
+    .chart__top {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+        padding: 22px 32px;
+        background: hsl(10, 79%, 65%);
+
+        .chart__balance {
+            .balance__suptitle {
+                p {
+                    font-size: 18px;
+                    color: hsl(33, 100%, 98%);
+                }
+            }
+
+            .balance {
+                margin-top: 10px;
+
+                p {
+                    font-weight: 700;
+                    font-size: 2rem;
+                    color: hsl(33, 100%, 98%);
+                }
+            }
+        }
+    }
+
+    .chart__main {
+        background: hsl(33, 100%, 98%);
+        padding: 39px 39px 50px;
+        border-radius: 20px;
+
+        .chart__title {
+            p {
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+        }
+
+        .charts {
+            display: flex;
+            justify-content: space-between;
+            margin: 59px 0 30px -10px;
+
+            .chart__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                &:nth-child(1) {
+                    .chart {
+                        height: 50px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .chart {
+                        height: 95px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .chart {
+                        background: hsl(186, 34%, 60%);
+                    }
+                }
+
+                &:nth-child(4) {
+                    .chart {
+                        height: 90px;
+                    }
+                }
+
+                &:nth-child(5) {
+                    .chart {
+                        height: 64px;
+                    }
+                }
+
+                &:nth-child(6) {
+                    .chart {
+                        height: 118px;
+                    }
+                }
+
+                &:nth-child(7) {
+                    .chart {
+                        height: 70px;
+                    }
+                }
+
+                .chart__inner {
+                    width: 74px;
+                    position: relative;
+
+                    &:hover {
+                        .chart {
+                            opacity: 0.5;
+                            transition: all ease 0.5s;
+                            cursor: pointer;
+                        }
+
+                        .chart__price {
+                            opacity: 1;
+                            transition: ease .5s all;
+                        }
+                    }
+                }
+
+                .chart__price {
+                    background: hsl(25, 47%, 15%);
+                    font-weight: 700;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    padding: 3px 4px;
+                    margin-bottom: 10px;
+                    opacity: 0;
+                    position: absolute;
+                    top: -34px;
+                    left: -3px;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+
+                .chart {
+                    width: 50px;
+                    height: 145px;
+                    background: hsl(10, 79%, 65%);
+                    border-radius: 5px;
+                }
+
+                .chart__name {
+                    margin-left: 12px;
+                    margin-top: 5px;
+
+                    p {
+                        font-size: 15px;
+                        color: hsl(28, 10%, 53%);
+                    }
+                }
+            }
+        }
+
+        .chart__description {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .chart__total {
+                .total__suptitle {
+                    p {
+                        color: hsl(28, 10%, 53%);
+                        font-size: 15px;
+                    }
+                }
+
+                .total {
+                    p {
+                        font-weight: 800;
+                        font-size: 3rem;
+                    }
+                }
+            }
+
+            .chart__percent {
+                .percent {
+                    p {
+                        font-size: 15px;
+                        text-align: right;
+                        font-weight: 700;
+                    }
+                }
+
+                .percent__subtitle {
+                    p {
+                        color: hsl(28, 10%, 53%);
+                    }
+                }
+            }
+        }
+    }
+}
